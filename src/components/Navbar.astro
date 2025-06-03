@@ -1,0 +1,17 @@
+---
+import NavLink from "./NavLink.astro";
+---
+
+<header class="bg-slate-900/80 w-full fixed backdrop-blur-md border-b border-blue-200/30">
+	<div  class="mx-auto max-w-7xl text-white">
+		<nav class="flex h-(--nav-h) items-center justify-between">
+			<div>My logo</div>
+			<div class="flex gap-10">
+				<NavLink to="#home" text="Home"/>
+				<NavLink to="#about" text="About"/>
+				<NavLink to="#projects" text="Projects"/>
+				<NavLink to="#contact" text="Contact"/>
+			</div>
+		</nav>
+	</div>
+</header>
