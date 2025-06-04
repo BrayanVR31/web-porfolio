@@ -7,7 +7,7 @@ import Projects from "../components/Projects.astro";
 import Contact from "../components/Contact.astro";
 ---
 
-<html class="font-jost"  lang="en">
+<html class="font-jost scroll-smooth bg-slate-950"  lang="en">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -15,9 +15,9 @@ import Contact from "../components/Contact.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body class="bg-slate-900">
+	<body class="bg-linear-to-r from-slate-950 via-blue-950/55 to-slate-950">
 		<Navbar />
-		<main>
+		<main class="scroll-smooth">
 			<Home />
 			<About />
 			<Projects />

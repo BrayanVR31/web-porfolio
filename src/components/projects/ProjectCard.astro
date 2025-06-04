@@ -1,0 +1,16 @@
+---
+import { Eye, Github } from "@lucide/astro";
+const { image, title } = Astro.props;
+---
+
+<div class="border border-blue-400/50 rounded-lg px-4 py-6 bg-slate-700/40 backdrop-blur-lg">
+  <figure class="rounded-lg overflow-hidden">
+    <img class="max-w-full h-full object-fit" src={image} alt="project image"/>
+  </figure>
+  <h4 class="text-white text-xl font-medium mt-4">{title}</h4>
+  <p class="mt-2 text-white/80 text-justify">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur dolor sit maxime, aliquid explicabo neque ducimus saepe, eius modi eligendi quam consectetur corrupti impedit et quisquam ipsam deserunt error rerum.</p>
+  <div class="flex gap-4 mt-4">
+    <button class="bg-sky-600 text-white py-2 px-4  rounded-sm cursor-pointer flex items-center gap-2 text-sm">Go to github <Github size={17}/></button>
+    <button class="bg-transparent border border-sky-600 text-sky-300 py-2 px-4  rounded-sm cursor-pointer flex items-center gap-2 text-sm">Live preview <Eye size={17}/></button>
+  </div>
+</div>
