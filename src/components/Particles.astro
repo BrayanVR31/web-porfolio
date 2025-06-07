@@ -1,0 +1,41 @@
+---
+import Particles from "astro-particles";
+import type { ISourceOptions } from "@tsparticles/engine";
+const options: ISourceOptions = {
+  background: {
+    color: {
+      value: "rgba(0, 0, 0, 0.5)",
+    },
+  },
+  fullScreen: {
+    zIndex: -1,
+  },
+  particles: {
+    number: {
+      value: 100
+    },
+    move: {
+      enable: true
+    }
+  },
+};
+---
+
+<script>
+  import { type Container, type Engine, tsParticles } from "@tsparticles/engine";
+  import { loadFull } from "tsparticles";
+  window.particlesInt = async (engine: Engine) => {
+    console.log("Particles.js is initializing...");
+    await loadFull(engine);
+  };
+
+  window.particlesLoaded = function (container: Container) {
+    console.log("Particles.js has loaded successfully!", container);
+  };
+</script>
+
+<Particles
+  id="app"
+  options={options}
+  init="particlesInit"
+/>

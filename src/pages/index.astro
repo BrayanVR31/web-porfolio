@@ -5,6 +5,7 @@ import Home from "../components/Home.astro";
 import About from "../components/About.astro";
 import Projects from "../components/Projects.astro";
 import Contact from "../components/Contact.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html class="font-jost scroll-smooth bg-slate-950"  lang="en">
@@ -15,13 +16,30 @@ import Contact from "../components/Contact.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 	</head>
-	<body class="bg-linear-to-r from-slate-950 via-blue-950/55 to-slate-950">
+	<body id="app" class="bg-linear-to-r from-slate-950 via-blue-950/55 to-slate-950">
 		<Navbar />
-		<main class="scroll-smooth">
+		<main class="scroll-smooth max-w-5xl mx-auto">
 			<Home />
 			<About />
 			<Projects />
-			<Contact />
 		</main>
+		<Footer />
 	</body>
+	<script>
+		const callback = (entries: IntersectionObserverEntry[]) => {
+			entries.forEach((entry)=>{
+				if(entry.isIntersecting) {
+					entry.target.classList.add("animate-scroll");
+					//observer.unobserve(entry.target);
+				} else {
+					entry.target.classList.remove("animate-scroll");
+				}
+			});
+		};
+		const observer = new IntersectionObserver(callback);
+		document.querySelectorAll("[data-scroll]").forEach((item, index)=>{
+			item.setAttribute("style", `animation-delay: ${index * 0.1}s;`);
+			observer.observe(item);
+		});
+	</script>
 </html>

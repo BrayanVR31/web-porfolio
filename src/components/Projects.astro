@@ -1,9 +1,11 @@
 ---
+import { FolderCode } from "@lucide/astro";
 import ProjectCard from "./projects/ProjectCard.astro";
 ---
 
 <section class="max-w-7xl mx-auto min-h-screen flex flex-col items-start pt-(--nav-h)"  id="projects">
-  <h3 class="mt-6 text-3xl font-medium text-white mb-12">Projects</h3>
+  <h3 class="mt-6 text-3xl font-semibold text-white mb-12 flex items-center gap-4 justify-center tex-center w-full">
+    <FolderCode size={30}/> Projects</h3>
   <div class="grid grid-cols-3 gap-6">
     <ProjectCard  image="https://media.licdn.com/dms/image/v2/D5612AQHa7xiegv6bgw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1723760089292?e=2147483647&v=beta&t=evG986J3qcaNKM4sXr-4PulPjJJrTDC-YYobaPZess0" title="Project 01"/>
     <ProjectCard  image="https://media.licdn.com/dms/image/v2/D5612AQHa7xiegv6bgw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1723760089292?e=2147483647&v=beta&t=evG986J3qcaNKM4sXr-4PulPjJJrTDC-YYobaPZess0" title="Project 01"/>

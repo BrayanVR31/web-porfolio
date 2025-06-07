@@ -1,13 +1,40 @@
 ---
-import { Mail, Phone, Linkedin, Github } from "@lucide/astro";
+import { Mail, Phone, Linkedin, Github, CircleUserRound } from "@lucide/astro";
 import ContactSvg from "../assets/contact.svg";
 ---
 
-<section id="contact" class="max-w-7xl mx-auto flex flex-col items-center justify-center pt-(--nav-h) text-white">
-  <div class="min-h-screen flex flex-col mx-auto text-center">
-    <h2 class="text-4xl mt-6 font-bold">Contact</h2>
-    <div class="flex flex-row-reverse items-center gap-12">
-      <ContactSvg class="w-xs" />
+<section id="contact" class="max-w-7xl min-h-screen max-h-screen pt-(--nav-h)">
+  
+</section>
+
+<!-- 
+<section id="contact" class="max-w-7xl mx-auto flex flex-col items-center justify-center pt-(--nav-h) text-white min-h-screen ">
+<h2 class="text-3xl font-semibold text-white flex justify-center items-center gap-4 mt-6 mb-12">
+    <CircleUserRound size={35}/>
+    Contact
+  </h2>
+  <p class="text-xl text-gray-300 mb-10 text-center">
+    Open to new opportunities and collaborations. Let’s connect and build something great together!
+  </p>
+  <div class="text-white flex justify-center gap-10">
+    <div class="max-w-md">
+      <div class="flex flex-col items-center space-y-6 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-10">
+        <a href="mailto:brayan.vazquez.ramirez.2000@gmail.com" class="flex items-center space-x-2 hover:text-blue-400 transition">
+          <Mail size={18}/>
+          <span>brayan.vazquez.ramirez.2000@gmail.com</span>
+        </a>
+        <a href="tel:+522212778135" class="flex items-center space-x-2 hover:text-blue-400 transition">
+          <Phone size={18}/>
+          <span>+52 221 277 8135</span>
+        </a>
+      </div>
+    </div>
+    <ContactSvg width="190px" height="360px"/>
+  </div>
+  <div class="flex flex-col justify-center mx-auto text-center">
+    <h2 class="text-4xl mt-6 font-bold flex items-center gap-4 justify-center"><CircleUserRound size={35}/>Contact</h2>
+    <div class="flex flex-wrap flex-row-reverse items-center gap-12">
+      <ContactSvg class="w-22"/>
       <div>
       <p class="text-lg text-gray-300 mb-10">
         Open to new opportunities and collaborations. Let’s connect and build something great together!
@@ -38,5 +65,6 @@ import ContactSvg from "../assets/contact.svg";
     </div>
   </div>
 </section>
+-->
 
 
