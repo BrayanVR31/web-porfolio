@@ -1,11 +1,23 @@
-<section class="pt-(--nav-h) max-w-7xl mx-auto min-h-screen flex items-center" id="home">
-  <div class="flex justify-between">
+---
+import { Sparkles } from "@lucide/astro";
+---
+
+<section class="pt-(--nav-h) max-w-7xl mx-auto min-h-screen flex items-center relative" id="home">
+  <div class="flex flex-wrap justify-between">
     <div class="w-1/2">
-      <h2 class="text-5xl font-extrabold text-white">Hi, I'm Brayan Vázquez Ramírez</h2>
-      <p class="mt-2 text-blue-300 font-semibold text-4xl bg-gradient-to-r from-violet-600 via-rose-500 to-orange-400 inline-block text-transparent bg-clip-text">Fullstack developer</p>
-      <p class="mt-8 text-white text-2xl text-pretty">As a passionate web developer, I love transforming ideas into modern, functional applications. I refine my skills with each new project.</p>
-      <a download="CV_Brayan_VR.pdf" href="/CV_Brayan_VR.pdf" class="bg-blue-600 inline-flex rounded-md px-7 py-3.5 text-white font-medium mt-8">Download resume</a>
+      <h2 class="text-5xl font-extrabold text-white">👋 Hi, I'm Brayan Vázquez Ramírez</h2>
+      <p class="mt-2 text-blue-300 font-semibold text-4xl bg-gradient-to-r from-violet-600 via-rose-500 to-orange-400 text-transparent bg-clip-text inline-block gap-2">Fullstack developer</p>
+      <div class="bg-gray-950/65 backdrop-blur-lg rounded-md px-4 py-4 mt-6">
+        <div class="flex gap-2 border-b border-gray-700 pb-4">
+          <div class="w-5 aspect-square bg-red-400 rounded-full"/>
+          <div class="w-5 aspect-square bg-yellow-400 rounded-full"/>
+          <div class="w-5 aspect-square bg-green-400 rounded-full"/>
+        </div>
+        <p class="mt-8 text-white text-xl text-pretty"><code><Sparkles class="text-teal-400 inline-block mr-2"/> As a passionate web developer, I love transforming ideas into modern, functional applications. I refine my skills with each new project.</code></p>
+      </div>
+      <a download="CV_Brayan_VR.pdf" href="/CV_Brayan_VR.pdf" class="bg-lime-600 inline-flex rounded-md px-7 py-3.5 text-white font-medium mt-8 hover:bg-lime-600/80 transition-colors duration-500">Download resume</a>
     </div>
-    <div class="w-sm aspect-square bg-black rounded-full overflow-hidden border border-white"></div>
+    <div class="w-[380px] shrink-0 h-[380px] bg-black rounded-full overflow-hidden border border-white"></div>
   </div>
 </section>
+
