@@ -1,14 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+@import "tailwind-scrollbar-hide/v4";
 
 @theme {
 	--font-jost: "Jost", sans-serif;
 	--nav-h: 70px;
 	--content-h: calc(100vh - var(--nav-h));
 
-	--animate-scroll: scrollAppear 0.5s ease-out forwards;
+	--animate-loop-scroll: loop-scroll 25s linear infinite;
+	--animate-scroll: scroll 0.5s ease-out forwards;
 
-	@keyframes scrollAppear {
+	@keyframes loop-scroll {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-100%);
+		}
+	}
+
+	@keyframes scroll {
 		from  {
 			opacity: 0;
 			scale: 0.5;
@@ -20,6 +31,12 @@
 			transform: translateX(0);
 		}
 	}
+}
+
+
+
+.pause {
+	animation-play-state: paused;
+}
 
 	
-}
